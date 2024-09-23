@@ -30,11 +30,11 @@ const handleLike = async (event) => {
     event.stopPropagation();
     try {
         await patchLike(card._id);
-        const userId = user._id;
-        const likes = JSON.parse(localStorage.getItem('likes')) || {};
-        likes[userId] = likes[userId] || {};
-        likes[userId][card._id] = !like;
-        localStorage.setItem('likes', JSON.stringify(likes));
+        // const userId = user._id;
+        // const likes = JSON.parse(localStorage.getItem('likes')) || {};
+        // likes[userId] = likes[userId] || {};
+        // likes[userId][card._id] = !like;
+        // localStorage.setItem('likes', JSON.stringify(likes));
         setLike((prev) => !prev);
         const message = !like ? 
             "The card has been marked as a favorite" : 

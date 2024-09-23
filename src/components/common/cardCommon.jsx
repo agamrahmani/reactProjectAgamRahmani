@@ -13,8 +13,8 @@ function CardCommon ({card, onClick, initialLike}){
     const { user } = useAuth();
     const { deleteCard, patchLike} = useCards();
     const [showEditCardsModal, setShowEditCardModal] = useState(false);
-    // const [like, setLike] = useState(initialLike);
-    const [like, setLike] = useState(user ? card.likes.includes(user._id) : false);
+    const [like, setLike] = useState(initialLike);
+    // const [like, setLike] = useState(user ? card.likes.includes(user._id) : false);
 
 
 useEffect(() => {

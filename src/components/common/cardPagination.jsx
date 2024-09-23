@@ -5,7 +5,7 @@ import CardCommon from './cardCommon';
 
 
 const CardPagination = ({ cards}) => {
-    const likes = JSON.parse(localStorage.getItem('likes')) || {};
+    // const likes = JSON.parse(localStorage.getItem('likes')) || {};
     const [currentPage, setCurrentPage] = useState(1);
     const navigate = useNavigate();
     const handelCardClick = (id) =>{
@@ -68,7 +68,7 @@ const CardPagination = ({ cards}) => {
     <Row>
         {currentCards.map((card) => {
     
-            const isLiked = likes[card._id] || false;
+            const isLiked = card.likes.includes(user._id) || false;
 
             return (
                 <Col key={card._id} xs={12} md={4} className="mb-3">

@@ -6,7 +6,6 @@ import { useAuth } from '../../contexts/autoContext';
 
 
 const CardPagination = ({ cards}) => {
-    // const likes = JSON.parse(localStorage.getItem('likes')) || {};
     const { user } = useAuth();
     const [currentPage, setCurrentPage] = useState(1);
     const navigate = useNavigate();

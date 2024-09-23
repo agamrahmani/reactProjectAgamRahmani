@@ -8,19 +8,16 @@ import { useCards } from '../../contexts/cardContext';
 import EditCardModal from "../../pages/editCarModal"
 
 
-function CardCommon ({card, onClick, initialLike}){
+function CardCommon ({card, onClick}){
     const { darkMode } = useDarkMode();
     const { user } = useAuth();
     const { deleteCard, patchLike} = useCards();
     const [showEditCardsModal, setShowEditCardModal] = useState(false);
-    // const [like, setLike] = useState(initialLike);
     const [like, setLike] = useState(user ? card.likes.includes(user._id) : false);
 
 
 useEffect(() => {
     if (user) {
-        // const likes = JSON.parse(localStorage.getItem('likes')) || {};
-        // setLike(likes[user._id]?.[card._id] || false);
         setLike(card.likes.includes(user._id));
     }
 }, [user, card._id]);
@@ -30,11 +27,6 @@ const handleLike = async (event) => {
     event.stopPropagation();
     try {
         await patchLike(card._id);
-        // const userId = user._id;
-        // const likes = JSON.parse(localStorage.getItem('likes')) || {};
-        // likes[userId] = likes[userId] || {};
-        // likes[userId][card._id] = !like;
-        // localStorage.setItem('likes', JSON.stringify(likes));
         setLike((prev) => !prev);
         const message = !like ? 
             "The card has been marked as a favorite" : 

@@ -27,14 +27,6 @@ useEffect(()=>{
         loadCards();
         },[]);
 
-// useEffect(() => {
-//         if (user) {
-//             const likes = JSON.parse(localStorage.getItem('likes')) || {};
-//             const likedCardIds = Object.keys(likes[user._id] || {});
-//             const newLikedCards = cards.filter(card => likedCardIds.includes(card._id));
-//             setLikedCards(newLikedCards);
-//         }
-//     }, [user, cards]); 
 
 useEffect(() => {
     if (user) {

@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Pagination } from 'react-bootstrap';
 import CardCommon from './cardCommon';
+import { useAuth } from '../../contexts/autoContext';
 
 
 const CardPagination = ({ cards}) => {
     // const likes = JSON.parse(localStorage.getItem('likes')) || {};
+    const { user } = useAuth();
     const [currentPage, setCurrentPage] = useState(1);
     const navigate = useNavigate();
     const handelCardClick = (id) =>{

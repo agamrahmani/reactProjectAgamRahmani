@@ -70,7 +70,7 @@ const CardPagination = ({ cards}) => {
     <Row>
         {currentCards.map((card) => {
     
-            const isLiked = card.likes.includes(user._id) || false;
+            const isLiked = user ? (card.likes.includes(user._id) || false) : false;
 
             return (
                 <Col key={card._id} xs={12} md={4} className="mb-3">

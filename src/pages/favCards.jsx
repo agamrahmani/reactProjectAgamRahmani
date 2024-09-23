@@ -38,11 +38,8 @@ useEffect(()=>{
 
 useEffect(() => {
     if (user) {
-        // const likes = JSON.parse(localStorage.getItem('likes')) || {};
-        // setLike(likes[user._id]?.[card._id] || false);
         const newLikedCards = cards.filter(card => card.likes.includes(card._id));
         setLikedCards(newLikedCards);
-       
     }
 }, [user, cards]);
 

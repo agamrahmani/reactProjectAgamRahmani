@@ -13,13 +13,16 @@ function CardCommon ({card, onClick, initialLike}){
     const { user } = useAuth();
     const { deleteCard, patchLike} = useCards();
     const [showEditCardsModal, setShowEditCardModal] = useState(false);
-    const [like, setLike] = useState(initialLike);
+    // const [like, setLike] = useState(initialLike);
+     const [like, setLike] = useState(user ? card.likes.includes(user._id) : false);
+    
 
 
 useEffect(() => {
     if (user) {
-        const likes = JSON.parse(localStorage.getItem('likes')) || {};
-        setLike(likes[user._id]?.[card._id] || false);
+        // const likes = JSON.parse(localStorage.getItem('likes')) || {};
+        // setLike(likes[user._id]?.[card._id] || false);
+        setLike(card.likes.includes(user._id));
     }
 }, [user, card._id]);
 

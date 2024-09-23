@@ -1,9 +1,22 @@
-# React + Vite
+# React Project - Agam Rahmani
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## תיאור
+פרויקט זה הוא אפליקציית React המאפשרת למשתמשים לצפות בכרטיסים של בעלי עסקים. ניתן להרשם ולהתחבר למערכת, משתמש מחובר יכול לסמן לייק ולשמור את הכרטיסים האהובים עליך. משתמש עסקי יכול ליצור כרטיסים משל עצמו ולבצע עליהם פעולות crud - יצירה ,קריאה, עדכון , מחיקה.
 
-Currently, two official plugins are available:
+## טכנולוגיות
+- React
+- React Router
+- Context API
+- Local Storage
+- Axios 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# reactProjectAgamRahmani
+## התקנה
+ Clone את הפרויקט:
+   ```bash
+   git clone https://github.com/agamarahmani/reactProjectAgamRahmani.git
+   cd reactProjectAgamRahmani
+  npm install
+
+
+
+

@@ -38,7 +38,7 @@ useEffect(()=>{
 
 useEffect(() => {
     if (user) {
-        const newLikedCards = cards.filter(card => card.likes.includes(card._id));
+        const newLikedCards = cards.filter(card => card.likes.includes(user._id));
         setLikedCards(newLikedCards);
     }
 }, [user, cards]);

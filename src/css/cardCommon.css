@@ -1,0 +1,24 @@
+.card {
+    display: flex;
+    height: 450px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 150px; 
+}
+
+.card-body {
+    overflow: auto;
+    flex-grow: 1;
+}
+
+
+.crad-transition{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.crad-transition:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
